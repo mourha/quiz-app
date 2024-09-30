@@ -110,6 +110,21 @@ function saveScore() {
     }
     localStorage.setItem('quizUserData', JSON.stringify(userData)) // Save as JSON
   }
+  // Function to set the correct/wrong class
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+      element.classList.add('correct')
+    } else {
+      element.classList.add('wrong')
+    }
+  }
+  
+  // Function to clear the correct/wrong class
+  function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+  }
   
  
 
