@@ -71,6 +71,7 @@
     display: flex; /* Applies flexbox to control elements */
     justify-content: center; /* Centers controls horizontally */
     align-items: center; /* Centers controls vertically */
+    gap: 20px;
   }
  
   .hide {
