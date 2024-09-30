@@ -18,4 +18,12 @@ submitNameButton.addEventListener('click', () => {
       alert("Please enter your name to start the quiz!") // Alert if no name is entered
     }
   })
+// Start quiz event listener
+startButton.addEventListener('click', startGame)
+
+// Next question event listener
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++
+  setNextQuestion()
+})
   
