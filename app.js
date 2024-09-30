@@ -102,6 +102,15 @@ if (correct) {
     startButton.classList.remove('hide')
     viewScoreButton.classList.remove('hide') // Show the view score button
   }
+  // Function to save score and username to localStorage
+function saveScore() {
+    const userData = {
+      name: userName,
+      score: score
+    }
+    localStorage.setItem('quizUserData', JSON.stringify(userData)) // Save as JSON
+  }
+  
  
 
   
