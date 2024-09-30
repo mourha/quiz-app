@@ -55,6 +55,24 @@ function showQuestion(question) {
       answerButtonsElement.appendChild(button)
     })
   }
+  // Function to reset state between questions
+function resetState() {
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    while (answerButtonsElement.firstChild) {
+      answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    }
+  }
+  
+  // Function to handle answer selection
+  function selectAnswer(e) {
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+      setStatusClass(button, button.dataset.correct)
+    })
+  
   
   
   
