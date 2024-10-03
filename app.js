@@ -121,24 +121,6 @@ const questions = [
     }
   ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Event listener to capture the user's name and start the quiz
 submitNameButton.addEventListener('click', () => {
     userName = nameInput.value
@@ -204,6 +186,7 @@ function resetState() {
     Array.from(answerButtonsElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
+// If correct answer, increase the score
 
     if ( correct) {
         score++
@@ -226,12 +209,7 @@ function resetState() {
         localStorage.setItem('quizUserData', JSON.stringify(userData)) // Save as JSON
       }
 }
-// If correct answer, increase the score
   
- 
- 
- 
-
  
   // Function to set the correct/wrong class
 function setStatusClass(element, correct) {
